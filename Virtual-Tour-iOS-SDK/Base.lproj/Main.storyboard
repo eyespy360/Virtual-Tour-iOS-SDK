@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ppf-2V-ejw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qvO-yl-f3J">
+            <objects>
+                <navigationController id="Ppf-2V-ejw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcb-b5-7kl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VMJ-si-EeI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dmy-YI-gG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602" y="139"/>
+        </scene>
+        <!--Form-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Virtual_Tour_iOS_SDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Virtual Tour URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b9-y7-94i">
+                                <rect key="frame" x="16" y="72" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-1U-kcC" userLabel="Virtual Tour Url Text Field">
+                                <rect key="frame" x="16" y="100.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRD-Tz-IKS">
+                                <rect key="frame" x="16" y="151" width="76" height="30"/>
+                                <state key="normal" title="Tour Editor"/>
+                                <connections>
+                                    <action selector="showTourEditor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOn-wv-Hck"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4b9-y7-94i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0xs-Eu-WCd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4b9-y7-94i" secondAttribute="trailing" id="2KS-8d-8ZZ"/>
+                            <constraint firstItem="bRD-Tz-IKS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8PB-Oh-lkM"/>
+                            <constraint firstItem="GZo-1U-kcC" firstAttribute="trailing" secondItem="4b9-y7-94i" secondAttribute="trailing" id="Npk-Mj-TND"/>
+                            <constraint firstItem="4b9-y7-94i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Uk1-dH-VSk"/>
+                            <constraint firstItem="GZo-1U-kcC" firstAttribute="top" secondItem="4b9-y7-94i" secondAttribute="bottom" constant="8" id="fUH-Cc-X1W"/>
+                            <constraint firstItem="GZo-1U-kcC" firstAttribute="leading" secondItem="4b9-y7-94i" secondAttribute="leading" id="ieP-TI-Awt"/>
+                            <constraint firstItem="bRD-Tz-IKS" firstAttribute="top" secondItem="GZo-1U-kcC" secondAttribute="bottom" constant="20" id="yvo-uk-oFt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Form" id="FkA-gk-KFj"/>
+                    <connections>
+                        <outlet property="virtualTourUrlTextField" destination="GZo-1U-kcC" id="ImU-fX-Plc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
