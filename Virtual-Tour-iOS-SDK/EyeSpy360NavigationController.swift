@@ -2,7 +2,6 @@
 //  EyeSpy360NavigationController.swift
 //  Virtual-Tour-iOS-SDK
 //
-//  Created by Dmitry Matyukhin on 04/04/2017.
 //  Copyright © 2017 EyeSpy360. All rights reserved.
 //
 
